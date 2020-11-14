@@ -3,7 +3,7 @@ from socket import *
 
 serversocket = socket(AF_INET, SOCK_STREAM)
 
-serversocket.bind(('', 65432))
+serversocket.bind(('192.168.1.104', 65432))
 serversocket.listen()
 
 while True :
