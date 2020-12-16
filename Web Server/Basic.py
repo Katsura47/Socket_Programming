@@ -8,6 +8,7 @@ serversocket.listen()
 
 while True :
     clientsocket, address = serversocket.accept()
+    print(clientsocket, address)
     clientsocket.send(('HTTP/1.1 200 OK\n' + 'Content-Type: text/html\n' + '\n' + '<html><body>Hello World! </body></html>').encode())
     clientsocket.shutdown(SHUT_WR)
     clientsocket.close()
